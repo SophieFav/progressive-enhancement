@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color:#1E93CC;
+}
+
+/* NAVIGATION */
+
+.navbar{
+background: #333;
+ display:flex;
+ justify-content: space-around;
+flex-wrap: wrap;
+}
+
+ul{
+    display:flex;
+}
+
+ul li{
+    font-size:14px;
+    list-style-type:none;
+    flex-flow: row wrap;
+    margin: 10px;
+}
+
+ul li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+/* CONTENT */
+
+.content{
+    display:flex;
+    flex-direction: row;
+}
+
+.thumb{
+    margin-left:10%;
+}
+
+.headertitle{
+    align-items: center;
+    margin-top:5%;
+    text-align:center;
+    color:#fff;
+}
+
+.headertitle h1{
+    margin-bottom:4%;
+}
+
+.headertitle p{
+    margin-bottom:10%;
+    font-size: 25px;
+}
+
+.buttonstart{
+    background-color:#E99002;
+    padding:6%;
+    color:#fff;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.buttonstart:hover{
+    background-color:#ffb135;
+}
+
+.point{
+    color:#E99002;
+}
+
+/* SECTIONS */
+
+.title2{
+    background-color:#fff;
+    padding:1%;
+    text-align:center;
+}
+
+/* TEXT */
+
+.row{
+    display:flex;
+    flex-flow: row wrap;
+    padding-left:6%;
+    padding-right:6%;
+    padding-bottom:3%;
+    
+}
+
+.text{
+    width:50%;
+    margin-top:2%;
+    color:#fff;
+    padding:10px;
+}
+
+
+.partners{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    background-color:#fff;
+}
+
+
+
+
+.buttons{
+    display:flex;
+    justify-content: center;
+    padding-top:50px;
+    font-size:20px;
+    text-align:center;
+    background-color:#fff
+}
+
+.buttons a{
+    width:15%;
+    padding:20px;
+    background-color:#165882;
+    color:#fff;
+    margin:3px;
+    border-radius:10px;
+    margin-bottom:100px;
+    font-weight:bold;
+    text-decoration: none;
+
+}
+
+.buttons a:hover{
+background-color:#4988af;
+}
+
+.buttons a:nth-child(3){
+    background-color:#E99002;
+}
+
+.buttons a:nth-child(3):hover{
+        background-color:#ffb135;
+}
+
+/* FOOTER */
+
+/* NAVIGATION */
+
+.footerbottom{
+background: #333;
+ display:flex;
+ justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.footerbottom ul{
+    display:flex;
+}
+
+.footerbottom ul li{
+    font-size:14px;
+    list-style-type:none;
+    flex-flow: row wrap;
+    margin: 10px;
+}
+
+.footerbottom ul li a{
+    color:#fff;
+    text-decoration: none;
+    padding-right:10px;
+    border-right: 1px dotted #fff;
+}
