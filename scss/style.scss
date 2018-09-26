@@ -1,261 +1,201 @@
+
 @import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Lato:700');
+@import "_buttons";
+@import "_colors";
+@import "_flexproperties";
 
-$color:#fff;
-$background-orange:#E99002;
-$background-grey: #333;
 
-/* GLOBAL */
+$textcolor:#fff;
+$background: #111;
 
-* {
+
+*{
     box-sizing: border-box;
-}
-
-body{
     margin:0;
     padding:0;
-    font-family:'Lato', sans-serif;
-    background-color:#1E93CC;
 }
 
-header{
-    width:100%;
-    min-height: 100%;
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color:$blue;
 }
 
 /* NAVIGATION */
 
-nav{
-background: #333;
-}
+.navbar{
+    background: $background;
+     @include flexproperties(space-around);
+     flex-wrap: wrap;
 
-.nav{
+     ul{
+        display:flex;
+
+        li{
+            font-size:14px;
+            list-style-type:none;
+            flex-flow: row wrap;
+            margin: 10px;
+
+            a{
+                color:$textcolor;
+                text-decoration: none;
+
+            &:hover{
+                color:$lightgrey;
+            }
+            }
+        }
+    }
+    }
+    
+
+.content{
     display:flex;
+    flex-direction: row;
+}
 
-    ul{
-        margin: 0px;
-        padding: 0px;
-        background: $background-grey;
-        list-style-type: none;
+.thumb{
+    margin-left:10%;
+}
+
+.headertitle{
+    align-items: center;
+    margin-top:5%;
+    text-align:center;
+    color:$textcolor;
+
+    h1{
+        margin-bottom:4%;
     }
 
-    a {
-        padding: 1em;
-        display: block;
-        text-align:center;
-        text-decoration: none;
-        color:$color;
+    p{
+        margin-bottom:10%;
+        font-size: 25px;
     }
-
 }
 
 
+.buttonstart{
+    background-color:$orange;
+    padding:6%;
+    color:$textcolor;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
 
-.nav .menu {
-    display: flex;
-    flex-direction : row;
-    justify-content: space-between;
-    width:60%;
-    margin-left:100px;
+        &:hover{
+            background-color:$lightorange;
+        }
 }
 
+.point{
+    color:$orange;
+}
 
-.nav li:nth-child(1){
-    margin-top:-23px;
+/* SECTIONS */
+
+.title2{
+    background-color:#fff;
+    padding:1%;
+    text-align:center;
+}
+
+/* TEXT */
+
+.row{
+    display:flex;
+    flex-flow: row wrap;
+    padding-left:6%;
+    padding-right:6%;
+    padding-bottom:3%;
     
 }
 
-.nav .login{
-    margin-left:200px;
+.text{
+    width:50%;
+    margin-top:2%;
+    color:$textcolor;
+    padding:10px;
 }
 
 
-
-.point{
-    color:#E99002;
-    font-size: 40px;
-}
-
-
-
-/* CONTENT */
-
-.headercontent{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-
-}
-
-.image{
- padding:2em;
-}
-
-.contentright{
-    margin-top:3%;
-    text-align:center;
-}
-
-.buttonstart{
-    background-color:$background-orange;
-    padding: 20px;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    color:$color;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight:bold;
-}
-
-.logo{
-    font-size:45px;
-    color:$color;
-}
-
-.slogan{
-    margin-top:-30px;
-    padding-bottom: 15px;
-    color:$color;
-}
-
-.point2{
-    color:#E99002;
-    font-size: 70px;
-}
-
-.awesome{
-    margin-top:-5px;
+.partners{
+    @include flexproperties(center);
+    flex-flow:row wrap;
     background-color:#fff;
-    padding:20px;
-    text-align:center;
-    font-size:30px;
-}
 
-.innovat{
-    background-color:#fff;
-    width:100%;
-    margin:0;
-    padding:0;
-    text-align:center;
-}
+        img{
+            margin-right:10px;
+        }
 
-.innovat img{
-    width:100%;
-    margin-top:-25px;
-}
-
-.innovative{
-    margin-top:-5px;
-    background-color:#fff;
-    padding:20px;
-    text-align:center;
-    font-size:30px;
-}
-
-.sections{
-    margin-top:-310px;
-    display: flex;
-    color:$color;
-    padding:100px;
-}
-
-.sections h1{
-    font-size: 30px;
-}
-
-.simple{
-    padding:20px;
-}
-
-.built{
-    padding:20px;
 }
 
 
 .buttons{
     display:flex;
     justify-content: center;
-    margin-top:50px;
+    padding-top:50px;
     font-size:20px;
-}
+    text-align:center;
+    background-color:#fff;
 
-.buttons a{
-    width:150px;
-    padding:20px;
-    background-color:#165882;
-    color:$color;
-    margin:3px;
-    border-radius:10px;
-    margin-bottom:100px;
-    font-weight:bold;
-    text-decoration: none;
+        a{
+            @include buttons;
 
-}
-.buttons a:nth-child(3){
-    background-color:$background-orange;
-}
+            &:hover{
+                background-color:$lightblue;
+                }
+        }
+
+        a:nth-child(3){
+            background-color:$orange;
+        
+        
+        &:nth-child(3):hover{
+                background-color:$lightorange;
+        }
+    }
+    }
+
 
 
 /* FOOTER */
 
-footer{
-    background-color: #333;
-    width:100%;
-}
+
 
 .footerbottom{
-    display:flex;
+background: $background;
+ @include flexproperties(space-around);
+ flex-wrap: wrap;
 
-}
+    ul{
+        display:flex;
 
-.footerbottom ul{
-    margin: 0px;
-    padding: 0px;
-    width:50%;
-    background-color: #333;
-    list-style-type: none;
-}
+        li{
+            font-size:14px;
+            list-style-type:none;
+            flex-flow: row wrap;
+            margin: 10px;
 
+            a{
+                color:$textcolor;
+                text-decoration: none;
+                padding-right:10px;
+                border-right: 1px dotted #fff;
 
+                &:hover{
+                    color:$lightgrey;
+                }
+            }
+        }
+    }
 
-.footerbottom a {
-    padding: 1em;
-    display: block;
-    text-decoration: none;
-    color: $color;
-    border-right: 1px dotted #fff;
-
-}
-
-.copyright{
-    color:$color;
-    width:100%;
-    margin-left:700px;
-}
-
-
-
-.footer {
-    display: flex;
-    flex-direction : row;
-    justify-content: flex-start;
+    
 }
 
 
-/* MEDIA QUERIES */
 
- @media(max-width: 450px) {
-     
-     .menu{
-      flex-flow: column wrap;
-     
-         }
-     
-     .headercontent{
-         flex-direction: column;
-     }
-     
-     .footer{
-         flex-flow: column wrap;
-     }
-}
+
+

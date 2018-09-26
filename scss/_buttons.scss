@@ -1,0 +1,11 @@
+@mixin buttons{
+            width:15%;
+            padding:20px;
+            background-color:#165882;
+            color:$textcolor;
+            margin:3px;
+            border-radius:10px;
+            margin-bottom:100px;
+            font-weight:bold;
+            text-decoration: none;
+    }
